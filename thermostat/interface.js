@@ -1,6 +1,7 @@
 $(document).ready(function(){
   var thermostat = new Thermostat();
   updateTemperature();
+  updatePowerSavingMode();
 
   $('#up-button').click(function(){
     thermostat.up();
@@ -13,23 +14,25 @@ $(document).ready(function(){
   });
 
   $("#power-saving-mode-button").click(function() {
-    console.log(1);
-    console.log(thermostat);
     thermostat.switchPowerSavingMode();
-    console.log(thermostat);
-    console.log(2);
-  }); //Not working properly
+    updatePowerSavingMode();
+  });
 
   $("#reset-button").click(function() {
-    console.log(9);
-    console.log(thermostat);
     thermostat.resetTemperature();
     updateTemperature();
-    console.log(thermostat);
-    console.log(8);
   });
 
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
   };
+
+  function updatePowerSavingMode() {
+    if(thermostat.powerSavingMode){
+      $('#power-saving-mode-info').text("On");
+    } else {
+      $('#power-saving-mode-info').text("Off");
+    }
+  };
+
 });
