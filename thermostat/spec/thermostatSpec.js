@@ -100,21 +100,25 @@ describe ('thermostat', function() {
 
   describe('#askEnergyUsage', function() {
     it('shows by default medium-usage', function() {
-      expect(thermostat.energyUsage).toEqual('medium-usage')
+      expect(thermostat.energyUsage).toEqual('medium-usage');
     });
 
     it('shows high-usage', function() {
-      for(var i=0; i <= 5; i++) {
+      for(var i=0; i < 5; i++) {
+        console.log('in loop');
+        console.log(thermostat.temperature);
         thermostat.up();
       }
-      expect(thermostat.energyUsage).toEqual('high-usage')
+      console.log('out of loop');
+      console.log(thermostat.temperature);
+      expect(thermostat.energyUsage).toEqual('high-usage');
     });
 
     it('shows low-usage', function() {
       for(var i=0; i <= 3; i++) {
         thermostat.down();
       }
-      expect(thermostat.energyUsage).toEqual('low-usage')
+      expect(thermostat.energyUsage).toEqual('low-usage');
     });
   });
 });

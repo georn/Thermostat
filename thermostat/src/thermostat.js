@@ -14,6 +14,7 @@ var Thermostat = function() {
   Thermostat.prototype.up = function() {
     if(this.temperature < this.maximum) {
       this.temperature++;
+      this.askEnergyUsage();
     } else {
       throw new Error('Maximum temperature reached.');
     }
@@ -22,6 +23,7 @@ var Thermostat = function() {
   Thermostat.prototype.down = function() {
     if(this.temperature > this.minimum){
       this.temperature--;
+      this.askEnergyUsage();
     } else {
       throw new Error('Minimum temperature reached.');
     }
@@ -38,10 +40,12 @@ var Thermostat = function() {
 
   Thermostat.prototype.resetTemperature = function() {
     this.temperature = DEFAULT_TEMPERATURE;
+    this.powerSavingMode = true;
+    this.askEnergyUsage();
   };
 
   Thermostat.prototype.askEnergyUsage = function() {
-    if(this.temperature < 18) {
+    if(this.temperature <= 18) {
       this.energyUsage = 'low-usage';
     } else if(this.temperature > 18 && this.temperature < 25) {
       this.energyUsage = 'medium-usage';
