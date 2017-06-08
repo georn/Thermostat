@@ -9,7 +9,10 @@
   </head>
   <body>
     <div>
-      <h1>Temperature: <span id="temperature"></span></h1>
+      <h1>Current city temperature: <span id="current-city-temperature"></span></h1>
+    </div>
+    <div>
+      <h1>Thermostat temperature: <span id="temperature"></span></h1>
     </div>
     <div>
       <h3>Energy Usage: <span id="energy-usage"></span></h3>
@@ -23,5 +26,15 @@
     <div>
       <input type="submit" value="Power Saving Mode" id="power-saving-mode-button"><input type="submit" value="Reset" id="reset-button">
     </div>
+    <section>
+      <select id="current-city-selector">
+        <option value="london">London</option>
+        <option value="newyork">New York</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="caracas">Caracas</option>
+        <option value="shiraz">Shiraz</option>
+      </select>
+    </section>
   </body>
 </html>
