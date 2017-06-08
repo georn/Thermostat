@@ -12,7 +12,7 @@ var Thermostat = function() {
   this.energyUsage = 'medium-usage';
 
   Thermostat.prototype.up = function() {
-    if(this.temperature <= this.maximum) {
+    if(this.temperature < this.maximum) {
       this.temperature++;
     } else {
       throw new Error('Maximum temperature reached.');
@@ -20,7 +20,7 @@ var Thermostat = function() {
   };
 
   Thermostat.prototype.down = function() {
-    if(this.temperature >= this.minimum){
+    if(this.temperature > this.minimum){
       this.temperature--;
     } else {
       throw new Error('Minimum temperature reached.');
