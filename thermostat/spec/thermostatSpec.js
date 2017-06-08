@@ -37,7 +37,7 @@ describe ('thermostat', function() {
     });
 
     it('will not increase temperature higher than the maximum when power saving mode is on ', function() {
-      for (var i = 0; i <= 5; i++) {
+      for (var i = 0; i < 5; i++) {
         thermostat.up();
       }
       expect(function(){thermostat.up()}).toThrow(new Error('Maximum temperature reached.'));
@@ -45,7 +45,7 @@ describe ('thermostat', function() {
 
     it('will not increase temperature higher than the maximum when power saving mode is off ', function() {
       thermostat.switchPowerSavingMode();
-      for (var i = 0; i <= 12; i++) {
+      for (var i = 0; i < 12; i++) {
         thermostat.up();
       }
       expect(function() { thermostat.up() }).toThrow(new Error('Maximum temperature reached.'));
@@ -59,7 +59,7 @@ describe ('thermostat', function() {
     });
 
     it('will not reduce temperature lower than the minimum', function() {
-      for (var i = 0; i <= 10; i++) {
+      for (var i = 0; i < 10; i++) {
         thermostat.down();
       }
       expect(function() { thermostat.down() }).toThrow(new Error('Minimum temperature reached.'));
@@ -100,21 +100,21 @@ describe ('thermostat', function() {
 
   describe('#askEnergyUsage', function() {
     it('shows by default medium-usage', function() {
-      expect(thermostat.askEnergyUsage()).toEqual('medium-usage')
+      expect(thermostat.energyUsage).toEqual('medium-usage')
     });
 
     it('shows high-usage', function() {
-      for(var i=0; i < 5; i++) {
+      for(var i=0; i <= 5; i++) {
         thermostat.up();
       }
-      expect(thermostat.askEnergyUsage()).toEqual('high-usage')
+      expect(thermostat.energyUsage).toEqual('high-usage')
     });
 
     it('shows low-usage', function() {
-      for(var i=0; i < 3; i++) {
+      for(var i=0; i <= 3; i++) {
         thermostat.down();
       }
-      expect(thermostat.askEnergyUsage()).toEqual('low-usage')
+      expect(thermostat.energyUsage).toEqual('low-usage')
     });
   });
 });
