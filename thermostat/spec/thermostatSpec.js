@@ -105,12 +105,8 @@ describe ('thermostat', function() {
 
     it('shows high-usage', function() {
       for(var i=0; i < 5; i++) {
-        console.log('in loop');
-        console.log(thermostat.temperature);
         thermostat.up();
       }
-      console.log('out of loop');
-      console.log(thermostat.temperature);
       expect(thermostat.energyUsage).toEqual('high-usage');
     });
 
