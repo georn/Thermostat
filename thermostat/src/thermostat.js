@@ -8,7 +8,8 @@ var Thermostat = function() {
   this.temperature = DEFAULT_TEMPERATURE;
   this.minimum = DEFAULT_MINIMUM_TEMPERATURE;
   this.maximum = DEFAULT_MAXIMUM_TEMPERATURE;
-  this.powerSavingMode = true
+  this.powerSavingMode = true;
+  this.energyUsage = 'medium-usage';
 
   Thermostat.prototype.up = function() {
     if(this.temperature <= this.maximum) {
@@ -41,11 +42,11 @@ var Thermostat = function() {
 
   Thermostat.prototype.askEnergyUsage = function() {
     if(this.temperature < 18) {
-      return 'low-usage';
+      this.energyUsage = 'low-usage';
     } else if(this.temperature >= 18 && this.temperature < 25) {
-      return 'medium-usage';
+      this.energyUsage = 'medium-usage';
     } else {
-      return 'high-usage';
+      this.energyUsage = 'high-usage';
     }
   };
 };
