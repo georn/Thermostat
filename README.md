@@ -1,6 +1,6 @@
 # Thermostat
 
-This is just the simple challenge to build a Thermostat with a few functionalities.
+The simple challenge was simple, to build a Thermostat with a few basic functionalities.
 
 ## User stories
 
@@ -28,15 +28,29 @@ I want to be able to ask the thermostat the current energy usage.
 
 ```
 
+## Quickstart
+
+First, you would need to install the dependencies running
+
+```
+npm install
+```
+
 ## Development
 
-After leaving this code to gain some dust for a few months, I decided to
-refactor it better because I believe it is a good code.
+The challenge is complete and here is a couple of demos of the application.
 
-Rather than have the code live as a static page, I decided to go and put it on
-top of a Node.js server, also giving me the opportunity to take away the
-standalone Jasmine testing frameworks and bringing it as a package to organise
-the application better.
+![](https://media.giphy.com/media/xUNda68Rmk9b4hdm12/giphy.gif)
+**Basic Functionality of the Thermostat**
+![](https://media.giphy.com/media/l4Epic42MqlVF6VHO/giphy.gif)
+**It is also connected to a Weather API to get the temperature of different cities!**
+
+But *there's always room for improvement* and also *I also would have liked it to look cool!*
+
+So, after leaving this code to gain some dust for a few months, I decided to start to refactor it.
+
+Rather than have the HTML document live by itself, I decided to go and put it on top of an Express.js server to also giving me the opportunity to take away the standalone Jasmine testing frameworks and bringing it as a package and ultimately step a notch on the application
+
 
 ## Tasks
 
