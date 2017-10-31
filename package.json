@@ -1,0 +1,35 @@
+{
+  "name": "thermostat",
+  "version": "1.0.0",
+  "description": "A simple Thermostat",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georn/Thermostat.git"
+  },
+  "keywords": [
+    "Thermostat",
+    "ES5",
+    "Javascript"
+  ],
+  "author": [
+    "Guillermo Olmos",
+    "Panteha Ahmadi",
+    "Spencer Barton-Fisher"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georn/Thermostat/issues"
+  },
+  "homepage": "https://github.com/georn/Thermostat#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "jasmine": "^2.8.0",
+    "jasmine-reporters": "^2.2.1"
+  }
+}
