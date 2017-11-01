@@ -39,15 +39,14 @@ npm install
 ## Development
 
 The challenge is complete and here is a couple of demos of the application.
-
 <p align="center">
-![Basic Functionality of the Thermostat](https://media.giphy.com/media/xUNda68Rmk9b4hdm12/giphy.gif)
+  <img src="https://media.giphy.com/media/xUNda68Rmk9b4hdm12/giphy.gif" alt="Basic Functionality of the Thermostat" />
 </p>
 <p align="center">
 *Basic Functionality of the Thermostat*
 </p>
 <p align="center">
-![Weather API](https://media.giphy.com/media/l4Epic42MqlVF6VHO/giphy.gif)
+  <img src="https://media.giphy.com/media/l4Epic42MqlVF6VHO/giphy.gif" alt="Weather API Functionality" />
 </p>
 <p align="center">
 *It is also connected to a Weather API to get the temperature of different cities!*
