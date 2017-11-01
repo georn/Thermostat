@@ -54,3 +54,5 @@ var Thermostat = function() {
     }
   };
 };
+
+module.exports = Thermostat;

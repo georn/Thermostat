@@ -40,14 +40,18 @@ npm install
 
 The challenge is complete and here is a couple of demos of the application.
 
+<p align="center">
 ![Basic Functionality of the Thermostat](https://media.giphy.com/media/xUNda68Rmk9b4hdm12/giphy.gif)
-
+</p>
+<p align="center">
 *Basic Functionality of the Thermostat*
-
+</p>
+<p align="center">
 ![Weather API](https://media.giphy.com/media/l4Epic42MqlVF6VHO/giphy.gif)
-
+</p>
+<p align="center">
 *It is also connected to a Weather API to get the temperature of different cities!*
-
+</p>
 But ***there's always room for improvement*** and also ***I also would have liked it to look cool!***
 
 So, after leaving this code to gain some dust for a few months, I decided to start to refactor it for the sake of practice.

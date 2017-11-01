@@ -1,9 +1,9 @@
-
-describe ('thermostat', function() {
+describe ('Thermostat', function() {
+  var Thermostat = require('../src/Thermostat');
   var thermostat;
 
   beforeEach(function() {
-    thermostat = new Thermostat;
+    thermostat = new Thermostat();
   });
 
   describe('default temperature', function() {
@@ -67,23 +67,23 @@ describe ('thermostat', function() {
   });
 
   describe('#switchPowerSavingMode', function() {
-    it('it switches power saving mode off', function() {
+    it('switches power saving mode off', function() {
       thermostat.switchPowerSavingMode();
       expect(thermostat.powerSavingMode).toEqual(false);
     });
 
-    it('it changes maximum temperature to 32 when off', function() {
+    it('changes maximum temperature to 32 when off', function() {
       thermostat.switchPowerSavingMode();
       expect(thermostat.maximum).toEqual(32);
     });
 
-    it('it switches power saving mode on', function() {
+    it('switches power saving mode on', function() {
       thermostat.switchPowerSavingMode();
       thermostat.switchPowerSavingMode();
       expect(thermostat.powerSavingMode).toEqual(true);
     });
 
-    it('it changes maximum temperature to 25 when on', function() {
+    it('changes maximum temperature to 25 when on', function() {
       thermostat.switchPowerSavingMode();
       thermostat.switchPowerSavingMode();
       expect(thermostat.maximum).toEqual(25);
