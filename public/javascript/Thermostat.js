@@ -55,4 +55,6 @@ var Thermostat = function() {
   };
 };
 
-module.exports = Thermostat;
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+  module.exports = Thermostat;
+}
