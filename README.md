@@ -30,9 +30,11 @@ I want to be able to ask the thermostat the current energy usage.
 
 ## Quickstart
 
-First, you would need to install the dependencies running
+First, you would need to clone, change directory and install the dependencies running the following commands:
 
 ```
+git clone git@github.com:georn/Thermostat.git
+cd Thermostat
 npm install
 ```
 
