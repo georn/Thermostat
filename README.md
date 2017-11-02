@@ -38,13 +38,12 @@ cd Thermostat
 npm install
 ```
 
-* Then to run it locally, run the following command:
+* Then to run it locally run the following command and enter `localhost:3000` on your browser:
 ```
 node app.js
 ```
-Then enter in your browser `localhost:3000`
 
-* If you want to run the test
+* If you want to run the tests
 ```
 npm test
 ```
@@ -65,14 +64,16 @@ Basic Functionality of the Thermostat
 It is also connected to a Weather API to get the temperature of different cities!
 </p>
 
-But ***there's always room for improvement*** and also ***I also would have liked it to look cool!***
+> But ***there's always room for improvement*** and also ***I also would have liked it to look cool!***
 
 So, after leaving this code to gain some dust for a few months, I decided to start to refactor it for the sake of practice.
 
-Rather than have the HTML document live by itself, I decided to go and put it on top of an **Express.js server** to also giving me the opportunity to take away the standalone Jasmine testing frameworks and bringing it as a package and ultimately step a notch on the application code.
+Rather than have the HTML document live by itself, I decided to go and put it on top of an **Express.js server** to also giving me the opportunity to take away the standalone **Jasmine** testing frameworks and bringing it as a package and ultimately step a notch on the application code.
+
+The next step is to add styling to the application.
 
 
-## Tasks
+## Main Tasks
 
 - [x] Thermostat starts at 20 degrees
 - [x] The minimum temperature is 10 degrees
@@ -91,5 +92,20 @@ This amazing people collaborated to the code, but by that time I wasn't a good g
 * [Spencer Barton-Fisher](https://github.com/spencerbf)
 * [Charlotte Fereday](https://github.com/charlottebrf)
 
+## Tech Stack
+
+Here is a list of the technologies used:
+
+- Javascript ES5
+- JQuery
+- Node.js
+- [Express.js](https://expressjs.com/)
+- [Pug](https://pugjs.org)
+- Jasmine
+- Travis CI
+
 # Resources
+
+An article that helped me during the development of the application.
+
 - [Writing Javascript Modules for both Broweser and Node.js](http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/)
