@@ -36,13 +36,13 @@ First, you would need to install the dependencies running
 npm install
 ```
 
-Then to run it locally, run the following command:
+* Then to run it locally, run the following command:
 ```
 node app.js
 ```
 Then enter in your browser `localhost:3000`
 
-If you want to run the test
+* If you want to run the test
 ```
 npm test
 ```
@@ -88,3 +88,6 @@ This amazing people collaborated to the code, but by that time I wasn't a good g
 * [Panteha Ahmadi](https://github.com/panteha)
 * [Spencer Barton-Fisher](https://github.com/spencerbf)
 * [Charlotte Fereday](https://github.com/charlottebrf)
+
+# Resources
+- [Writing Javascript Modules for both Broweser and Node.js](http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/)
