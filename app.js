@@ -1,15 +1,14 @@
 const express = require('express');
-const path = require('path')
+const path = require('path');
 const app = express();
 
-// app.set('port', 3000)
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
-app.use(express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+  res.render('index', {title: 'Thermostat Application'});
+});
 
-app.listen(3000, function () {
-  console.log('Listerning on 3000');
-})
+app.listen(3000);

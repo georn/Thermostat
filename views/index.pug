@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Thermostat
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script
+      include ../public/javascript/Thermostat.js
+      include ../public/javascript/interface.js
+  body
+    h1 Current city temperature: #[span#current-city-temperature] °C
+    h1 Thermostat temperature: #[span#temperature] °C
+    h3 Energy Usage: #[span#energy-usage]
+    h3 Power Saving Mode: #[span#power-saving-mode-info]
+    div
+      input#up-button(
+        type="submit"
+        value="Up"
+      )
+      input#down-button(
+        type="submit"
+        value="down"
+      )
+    div
+      input#power-saving-mode-button(
+        type="submit"
+        value="Power Saving Mode"
+      )
+      input#reset-button(
+        type="submit"
+        value="Reset"
+      )
+    section
+      form#select-city
+        input#current-city(
+          type="text"
+          placeholder="Enter a city"
+        )
+        input(type="submit")
