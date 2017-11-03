@@ -99,10 +99,11 @@ Here is a list of the technologies used:
 - Javascript ES5
 - JQuery
 - Node.js
-- [Express.js](https://expressjs.com/)
-- [Pug](https://pugjs.org)
-- Jasmine
-- Travis CI
+- [Express.js for a Web Application Framework](https://expressjs.com/)
+- [Pug for a Template Engine](https://pugjs.org)
+- [Jasmine for Testing](https://jasmine.github.io/)
+- [Istanbul for test coverage](https://istanbul.js.org/)
+- [Travis CI for Continuous Integration](https://travis-ci.org/)
 
 # Resources
 
