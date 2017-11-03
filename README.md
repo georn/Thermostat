@@ -1,4 +1,4 @@
-# Thermostat [![Build Status](https://travis-ci.org/georn/Thermostat.svg?branch=master)](https://travis-ci.org/georn/Thermostat)
+# Thermostat [![Build Status](https://travis-ci.org/georn/Thermostat.svg?branch=master)](https://travis-ci.org/georn/Thermostat) [![Coverage Status](https://coveralls.io/repos/github/georn/Thermostat/badge.svg?branch=master)](https://coveralls.io/github/georn/Thermostat?branch=master)
 
 The simple challenge was simple, to build a Thermostat with a few basic functionalities.
 
@@ -104,6 +104,7 @@ Here is a list of the technologies used:
 - [Jasmine for Testing](https://jasmine.github.io/)
 - [Istanbul for test coverage](https://istanbul.js.org/)
 - [Travis CI for Continuous Integration](https://travis-ci.org/)
+- [Coveralls for web hosted test coverage](https://coveralls.io)
 
 # Resources
 
