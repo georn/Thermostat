@@ -4,7 +4,7 @@
   "description": "A simple Thermostat",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine"
+    "test": "istanbul cover jasmine && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -31,8 +31,10 @@
     "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "istanbul": "^0.4.5",
     "jasmine": "^2.8.0",
+    "jasmine-node": "^1.14.5",
     "jasmine-spec-reporter": "^4.2.1"
   }
 }
