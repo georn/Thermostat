@@ -98,6 +98,7 @@ Here is a list of the technologies used:
 
 - Javascript ES5
 - JQuery
+- OpenWeather API
 - Node.js
 - [Express.js for a Web Application Framework](https://expressjs.com/)
 - [Pug for a Template Engine](https://pugjs.org)

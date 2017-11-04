@@ -3,10 +3,10 @@ html
   head
     meta(charset='utf-8')
     title Thermostat
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
     script
-      include ../public/javascript/Thermostat.js
-      include ../public/javascript/interface.js
+      include ../node_modules/jquery/dist/jquery.min.js
+      include ../public/js/Thermostat.js
+      include ../public/js/interface.js
   body
     h1 Current city temperature: #[span#current-city-temperature] °C
     h1 Thermostat temperature: #[span#temperature] °C
