@@ -1,5 +1,5 @@
 describe ('Thermostat', function() {
-  var Thermostat = require('../public/javascript/Thermostat');
+  var Thermostat = require('../public/js/Thermostat');
   var thermostat;
 
   beforeEach(function() {

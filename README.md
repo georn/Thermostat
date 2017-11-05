@@ -40,7 +40,7 @@ npm install
 
 * Then to run it locally run the following command and enter `localhost:3000` on your browser:
 ```
-node app.js
+npm start
 ```
 
 * If you want to run the tests

@@ -4,6 +4,7 @@
   "description": "A simple Thermostat",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "istanbul cover jasmine && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
