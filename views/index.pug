@@ -4,37 +4,44 @@ html
     meta(charset="utf-8")
     title Thermostat Application
     link(href="css/bootstrap.min.css" rel="stylesheet" type="text/css")
+    link(href="css/style.css" rel="stylesheet" type="text/css")
     script
       include ../node_modules/jquery/dist/jquery.min.js
       include ../public/js/Thermostat.js
       include ../public/js/interface.js
   body
-    h1 #[span#current-city-selected London] temperature: #[span#current-city-temperature] °C
-    h1 Thermostat temperature: #[span#temperature] °C
-    h3 Energy Usage: #[span#energy-usage]
-    h3 Power Saving Mode: #[span#power-saving-mode-info]
-    div
-      input#up-button(
-        type="submit"
-        value="Up"
-      )
-      input#down-button(
-        type="submit"
-        value="down"
-      )
-    div
-      input#power-saving-mode-button(
-        type="submit"
-        value="Power Saving Mode"
-      )
-      input#reset-button(
-        type="submit"
-        value="Reset"
-      )
-    section
-      form#select-city
-        input#current-city(
-          type="text"
-          placeholder="Enter a city"
+    div.temperature_displays
+      div.temperature_displays-city
+        h1 #[span#current-city-selected London] temperature: #[span#current-city-temperature] °C
+      div.temperature_displays-thermostat
+        h1 Thermostat temperature: #[span#temperature] °C
+
+    div.thermostat
+      div.thermostat_mode-displays
+        h3 Energy Usage: #[span#energy-usage]
+        h3 Power Saving Mode: #[span#power-saving-mode-info]
+      div.thermostat_controls-temperature
+        input#up-button(
+          type="submit"
+          value="Up"
         )
-        input(type="submit")
+        input#down-button(
+          type="submit"
+          value="down"
+        )
+      div.thermostat_controls-mode
+        input#power-saving-mode-button(
+          type="submit"
+          value="Power Saving Mode"
+        )
+        input#reset-button(
+          type="submit"
+          value="Reset"
+        )
+      div.temperature_city
+        form#select-city
+          input#current-city(
+            type="text"
+            placeholder="Enter a city"
+          )
+          input(type="submit")
