@@ -1,5 +1,6 @@
 $(document).ready(function(){
   var thermostat = new Thermostat();
+
   updateTemperature();
   updatePowerSavingMode();
   updateEnergyUsage();
@@ -32,8 +33,13 @@ $(document).ready(function(){
   });
 
   $('#select-city').submit(function(event) {
+    var city, previousCity;
     event.preventDefault();
-    var city = $('#current-city').val()
+    city = $('#current-city').val()
+    previousCity = $('#current-city-selected').text();
+    $('#current-city-selected').text( function() {
+      return $(this).text().replace(previousCity, city);
+    })
     displayWeather(city);
   });
 
@@ -54,11 +60,22 @@ $(document).ready(function(){
   };
 
   function displayWeather(city) {
-    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
-    var token = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed';
-    var units = '&units=metric';
+    var url, token, units;
+    url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
+    token = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed';
+    units = '&units=metric';
     $.get(url + token + units, function(data) {
       $('#current-city-temperature').text(data.main.temp);
+    }).fail( function() {
+      var previousCity, previousTemperature
+      previousCity = $('#current-city-selected').text();      
+      previousTemperature = $('#current-city-temperature').text();
+      $('#current-city-selected').text(function () {
+        return $(this).text().replace(previousCity, 'N/A');
+      })
+      $('#current-city-temperature').text(function () {
+        return $(this).text().replace(previousTemperature, 'N/A');
+      });
     });
   }
 
